@@ -17,7 +17,7 @@ class Ceaser
                    elsif @@LOWERCASE_LETTERS.include? x
                      @@LOWERCASE_LETTERS [(@@LOWERCASE_LETTERS.index(x) + @key) % 26] #Finds the index of the variable and adds the key to it
                    else
-                     encrypted += x
+                     x
                    end
     end
     encrypted #Returns the enctrypted text. 
@@ -25,5 +25,5 @@ class Ceaser
 end
 
 cipher = Ceaser.new(5) #Calls the method 
-puts cipher.encrypt('fuck you')
+puts cipher.encrypt('Hello World')
 
