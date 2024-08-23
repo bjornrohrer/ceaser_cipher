@@ -20,10 +20,10 @@ class Ceaser
                      encrypted += x
                    end
     end
-    encrypted
+    encrypted #Returns the enctrypted text. 
   end
 end
 
-cipher = Ceaser.new(5)
+cipher = Ceaser.new(5) #Calls the method 
 puts cipher.encrypt('fuck you')
 
