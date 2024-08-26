@@ -13,11 +13,11 @@ class Ceaser
   def encrypt(text)
     encrypted = '' # Variable that holds the encrypted text.
     text.split('').each do |x| # splits the given text into an array and iterates over each index inside the array.
-      encrypted += if @@uppercase_letters.include? x # Checks if any uppercase letter is included in the variable.
-                     @@uppercase_letters [(@@uppercase_letters.index(x) + @key) % 26] # Finds the index of the variable,
+      encrypted += if @uppercase_letters.include? x # Checks if any uppercase letter is included in the variable.
+                     @uppercase_letters [(@uppercase_letters.index(x) + @key) % 26] # Finds the index of the variable,
                      # and adds the key to it.
-                   elsif @@lowercase_letters.include? x
-                     @@lowercase_letters [(@@lowercase_letters.index(x) + @key) % 26] # Finds the index of the variable,
+                   elsif @lowercase_letters.include? x
+                     @lowercase_letters [(@lowercase_letters.index(x) + @key) % 26] # Finds the index of the variable,
                      # and adds the key to it
                    else
                      x
