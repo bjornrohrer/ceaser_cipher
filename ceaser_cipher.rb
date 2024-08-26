@@ -1,8 +1,9 @@
-class Ceaser
-  @@uppercase_letters = ('A'..'Z').to_a # Creates an array of letters from A to Z in uppercase.
-  @@lowercase_letters = ('a'..'z').to_a # Creates an array of letters from A to Z in lowercase.
+ frozen_string_literal: true
 
-  attr_accessor = :key # Gets and sets the key without using methods.
+class Ceaser
+  @uppercase_letters = ('A'..'Z').to_a # Creates an array of letters from A to Z in uppercase.
+  @lowercase_letters = ('a'..'z').to_a # Creates an array of letters from A to Z in lowercase. # Gets and sets the key -
+  # without using methods.
 
   def initialize(key)
     # Constructor recevies the key upon initailization.
