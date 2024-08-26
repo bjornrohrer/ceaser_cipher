@@ -1,6 +1,6 @@
 class Ceaser
-  @@UPPERCASE_LETTERS = ('A'..'Z').to_a # Creates an array of letters from A to Z in uppercase.
-  @@LOWERCASE_LETTERS = ('a'..'z').to_a # Creates an array of letters from A to Z in lowercase.
+  @@uppercase_letters = ('A'..'Z').to_a # Creates an array of letters from A to Z in uppercase.
+  @@lowercase_letters = ('a'..'z').to_a # Creates an array of letters from A to Z in lowercase.
 
   attr_accessor = :key # Gets and sets the key without using methods.
 
@@ -12,11 +12,11 @@ class Ceaser
   def encrypt(text)
     encrypted = '' # Variable that holds the encrypted text.
     text.split('').each do |x| # splits the given text into an array and iterates over each index inside the array.
-      encrypted += if @@UPPERCASE_LETTERS.include? x # Checks if any uppercase letter is included in the variable.
-                     @@UPPERCASE_LETTERS [(@@UPPERCASE_LETTERS.index(x) + @key) % 26] # Finds the index of the variable,
+      encrypted += if @@uppercase_letters.include? x # Checks if any uppercase letter is included in the variable.
+                     @@uppercase_letters [(@@uppercase_letters.index(x) + @key) % 26] # Finds the index of the variable,
                      # and adds the key to it.
-                   elsif @@LOWERCASE_LETTERS.include? x
-                     @@LOWERCASE_LETTERS [(@@LOWERCASE_LETTERS.index(x) + @key) % 26] # Finds the index of the variable,
+                   elsif @@lowercase_letters.include? x
+                     @@lowercase_letters [(@@lowercase_letters.index(x) + @key) % 26] # Finds the index of the variable,
                      # and adds the key to it
                    else
                      x
